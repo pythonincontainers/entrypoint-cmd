@@ -1,0 +1,5 @@
+FROM python
+RUN pip install psutil
+WORKDIR /app/
+COPY args.py /app/
+ENTRYPOINT exec python args.py first-arg
