@@ -2,4 +2,5 @@ FROM python
 RUN pip install psutil
 WORKDIR /app/
 COPY args.py /app/
-ENTRYPOINT python args.py first-arg
+ENTRYPOINT ["python"]
+CMD ["args.py"]
